@@ -45,4 +45,15 @@
 
     }
 
+    // https://gist.github.com/Klerith/42d6d3a2ce5585d701afc67ca7a4a325
+
+    const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }): number => {
+
+        if ( isDead ) { return 1500; }
+
+        if ( isSeparated ) { return 2500; }
+        
+        return ( isRetired ) ? 3000 : 4000;
+    }
+
 })();
